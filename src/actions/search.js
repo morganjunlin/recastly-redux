@@ -9,8 +9,7 @@ var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   let options = {
     key: YOUTUBE_API_KEY,
-    query: q,
-    max: 5
+    query: q
   }
   return (dispatch) => {
     searchYouTube(options, (videos) => {
