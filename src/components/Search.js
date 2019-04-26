@@ -16,6 +16,7 @@ class Search extends React.Component {
     });
   }
 
+
   render() {
     return (
       <div className="search-bar form-inline">
@@ -25,7 +26,7 @@ class Search extends React.Component {
           value={this.state.value}
           onChange={this.handleInputChange.bind(this)}
         />
-        <button className="btn hidden-sm-down">
+        <button className="btn hidden-sm-down" onClick={() => (this.props.handleSearchInputChange(this.state.value))}>
           <span className="glyphicon glyphicon-search"></span>
         </button>
       </div>
